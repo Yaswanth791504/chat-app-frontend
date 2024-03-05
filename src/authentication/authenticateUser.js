@@ -1,4 +1,4 @@
-const url = "http://localhost:9898/api";
+const url = "https://chat-app-backend-vg68.onrender.com/api";
 
 export async function createUser(body) {
   try {

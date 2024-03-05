@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
-const LOCALHOSTLINK = import.meta.env.REACT_APP_BACKEND_LINK;
-console.log(LOCALHOSTLINK);
+const LOCALHOSTLINK = "https://chat-app-backend-vg68.onrender.com/api";
 
 const getUserFriends = async () => {
   try {
@@ -16,7 +15,7 @@ const getUserFriends = async () => {
     return jsonData.data.friends;
   } catch (err) {
     console.error(err);
-    return err.message;
+    return [];
   }
 };
 
