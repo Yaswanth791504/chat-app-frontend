@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-const LOCALHOSTLINK = process.env.REACT_APP_BACKEND_LINK;
+const LOCALHOSTLINK = import.meta.env.REACT_APP_BACKEND_LINK;
+console.log(LOCALHOSTLINK);
 
 const getUserFriends = async () => {
   try {

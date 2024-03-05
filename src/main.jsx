@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import App from "./App.jsx";
 import store from "./Contexts/userContext.jsx";
 import "./index.css";
+import "./services/user.js";
 
 const queryClient = new QueryClient();
 
