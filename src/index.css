@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
+  --orange: #cf7135;
+  --blue: #1b1a52;
+
+  @font-face {
+    font-family: "regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Arial CE Regular"), url("ArialCE.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Arial Regular"), url("ARIAL.woff") format("woff");
+  }
+}
