@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { Tag, TagLabel, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import ImageContainer from "./ImageContainer";
@@ -34,11 +34,7 @@ const FriendChat = ({ friend: { name, profileImage, _id: id } }) => {
   return (
     <>
       <Chat to={`/mine/chats/${id}`}>
-        <ImageContainer
-          link={`/${profileImage.split("\\").at(-1)}`}
-          alt="profile"
-          size="45px"
-        />
+        <ImageContainer link={`${profileImage}`} alt="profile" size="45px" />
         <ChatText>
           <Text fontSize="md" as="b">
             {name}
@@ -47,16 +43,6 @@ const FriendChat = ({ friend: { name, profileImage, _id: id } }) => {
         </ChatText>
         <div>
           <Text fontSize="xs">time</Text>
-          <Tag
-            style={{
-              backgroundColor: "var(--orange)",
-              color: "#fff",
-              fontWeight: "normal",
-            }}
-            borderRadius="full"
-          >
-            <TagLabel>4</TagLabel>
-          </Tag>
         </div>
       </Chat>
     </>

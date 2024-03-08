@@ -92,6 +92,7 @@ const ProfilePage = () => {
 
   function handleFileOnChange(event) {
     const fileUploaded = event.target.files[0];
+    console.log(fileUploaded);
     updateUserAvatar(fileUploaded);
   }
 

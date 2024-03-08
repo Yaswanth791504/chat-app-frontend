@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const LOCALHOSTLINK = "https://chat-app-backend-vg68.onrender.com/api";
+const LOCALHOSTLINK = "https://chat-app-backend-vg68.onrender.com/api/";
 
 const getUserFriends = async () => {
   try {
@@ -200,16 +200,16 @@ const sendMessageToUser = async (data, id) => {
 
 const updateUserProfileImage = async (body) => {
   try {
-    const fileData = new FormData();
-    fileData.append("profileImage", body);
-    const res = await fetch(`${LOCALHOSTLINK}user/updateProfileImage`, {
+    const formData = new FormData();
+    formData.append("profileImage", body);
+    const fetchedData = await fetch(`${LOCALHOSTLINK}user/updateProfileImage`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      body: fileData,
+      body: formData,
     });
-    const jsonData = await res.json();
+    const jsonData = await fetchedData.json();
     console.log(jsonData);
     return jsonData;
   } catch (err) {
@@ -223,7 +223,7 @@ const updateBackgroundImage = async (body) => {
     const formData = new FormData();
     formData.append("backgroundImage", body);
     const fetchedData = await fetch(
-      "${LOCALHOSTLINK}user/updateBackgroundImage",
+      `${LOCALHOSTLINK}user/updateBackgroundImage`,
       {
         method: "PUT",
         headers: {
@@ -232,7 +232,6 @@ const updateBackgroundImage = async (body) => {
         body: formData,
       }
     );
-
     const jsonData = await fetchedData.json();
     console.log(jsonData);
     return jsonData;

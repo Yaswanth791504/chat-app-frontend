@@ -9,6 +9,7 @@ import LoginOrSignUp from "./pages/LoginOrSignUp";
 import ProfilePage from "./pages/ProfilePage";
 import RequestsPage from "./pages/RequestsPage";
 import AppLayout from "./ui/AppLayout";
+import PageNotFound from "./ui/PageNotFound";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/mine/profile" element={<ProfilePage />} />
           </Route>
           <Route path="/auth" element={<LoginOrSignUp />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

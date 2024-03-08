@@ -37,12 +37,11 @@ const FriendHeader = () => {
 
   useEffect(() => {});
 
-  console.log(friendData);
   return (
     <ChatSearchDiv>
       <ImageContainer
         size="50px"
-        link={`/${friendData?.data?.user?.profileImage?.split("\\").at(-1)}`}
+        link={`${friendData?.data?.user?.profileImage}`}
         alt="profile"
       />
       <FriendName>

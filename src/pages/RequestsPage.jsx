@@ -61,7 +61,7 @@ const RequestsPage = () => {
               key={request._id}
               id={request.from._id}
               name={request.from.name}
-              profileImage={`/${request.from.profileImage?.split("\\").at(-1)}`}
+              profileImage={`${request.from.profileImage}`}
               isRequest={true}
               acceptRequest={acceptRequestFriend}
             />

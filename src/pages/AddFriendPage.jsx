@@ -53,7 +53,7 @@ const AddFriendPage = () => {
                 key={user._id}
                 name={user.name}
                 id={user._id}
-                profileImage={`/${user?.profileImage?.split("\\")?.at(-1)}`}
+                profileImage={`${user?.profileImage}`}
               />
             ))}
         {data.length === 0 && !isPending && name.length !== 0 && (

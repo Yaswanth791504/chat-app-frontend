@@ -25,8 +25,6 @@ const SearchCardComponent = ({
     mutationFn: sendRequestToUser,
     onSuccess: (message) => {},
   });
-  console.log(profileImage);
-
   function handleAddFriend() {
     mutate(id);
   }
@@ -66,7 +64,7 @@ const SearchCardComponent = ({
             onClick={
               acceptRequest !== undefined
                 ? () => acceptRequest(id)
-                : handleAddFriend
+                : () => handleAddFriend()
             }
           >
             {acceptRequest === undefined
